@@ -64,4 +64,4 @@ def merge():
     elif num_args == 4:
         merge_vtp(ttf_path=argv[1], vtp_path=argv[2], out_path=argv[3])
     else:
-        print(f"Usage: {argv[0]} TTF_PATH VTP_PATH")
+        print(f"Usage: {argv[0]} TTF_PATH VTP_PATH [TTF_OUT_PATH]")
