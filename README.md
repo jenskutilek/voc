@@ -1,6 +1,6 @@
 # voc
 
-MS VOLT command line tools.
+MS VOLT command line tools. Extract and merge VOLT project files (.vtp), e.g. if you prefer to edit them in a standalone text editor.
 
 
 ## voc_extract
@@ -16,7 +16,7 @@ If `OUT_PATH` is not specified, the output file name is constructed by replacing
 
 ## voc_merge
 
-Extract a VOLT project file (.vtp) from a font.
+Merge a VOLT project file (.vtp) into a font. Existing VOLT data in the font is overwritten.
 
 ```bash
 $ voc_merge TTF_PATH VTP_PATH [TTF_OUT_PATH]
