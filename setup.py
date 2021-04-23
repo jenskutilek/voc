@@ -17,6 +17,7 @@ setup(
         "console_scripts": [
             "voc_extract = voc:extract",
             "voc_merge = voc:merge",
+            "voc_parse = voc:parse",
         ]
     },
     author="Jens Kutilek",

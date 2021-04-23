@@ -2,6 +2,7 @@ import codecs
 
 from fontTools.ttLib import TTFont
 from fontTools.ttLib.tables.T_S_I_V_ import table_T_S_I_V_
+from fontTools.voltLib.parser import Parser
 from sys import argv
 
 
@@ -43,6 +44,13 @@ def merge_vtp(ttf_path, vtp_path, out_path=None):
     font.close()
 
 
+def parse_vtp(vtp_path):
+    parser = Parser(vtp_path)
+    parser.parse()
+    # for glyph, anchor in parser.anchors_.items():
+    #     print(glyph, anchor)
+
+
 def extract():
     # Extract a project file from a font
     # cmd line interface
@@ -65,3 +73,13 @@ def merge():
         merge_vtp(ttf_path=argv[1], vtp_path=argv[2], out_path=argv[3])
     else:
         print(f"Usage: {argv[0]} TTF_PATH VTP_PATH [TTF_OUT_PATH]")
+
+
+def parse():
+    # Parse a project file
+    # cmd line interface
+    num_args = len(argv)
+    if num_args == 2:
+        parse_vtp(vtp_path=argv[1])
+    else:
+        print(f"Usage: {argv[0]} VTP_PATH")
