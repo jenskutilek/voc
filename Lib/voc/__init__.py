@@ -38,7 +38,8 @@ def merge_vtp(ttf_path, vtp_path, out_path=None):
     with codecs.open(vtp_path, "rb", "utf-8") as f:
         lines = f.readlines()
 
-    tsiv.data = "\r" + "\r".join([line.strip() for line in lines]) + "\r"
+    tsiv.data = ("\r" + "\r".join([line.strip() for line in lines]) + "\r").encode()
+    font["TSIV"] = tsiv
 
     font.save(out_path)
     font.close()
