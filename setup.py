@@ -18,6 +18,7 @@ setup(
             "voc_extract = voc:extract",
             "voc_merge = voc:merge",
             "voc_parse = voc:parse",
+            "voc_ship = voc.ship:ship",
         ]
     },
     author="Jens Kutilek",
