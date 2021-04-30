@@ -37,7 +37,7 @@ $ voc_parse VTP_PATH
 Remove VOLT source data from a font.
 
 ```bash
-$ voc_ship TTF_PATH [OUT_PATH]
+$ voc_ship TTF_PATH [TTF_OUT_PATH]
 ```
 
-If `OUT_PATH` is not specified, the input font file is overwritten.
+If `TTF_OUT_PATH` is not specified, the original font file is overwritten.
