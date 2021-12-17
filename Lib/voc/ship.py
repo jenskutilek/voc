@@ -6,9 +6,8 @@ def ship_font(ttf_path, out_path=None):
     if out_path is None:
         out_path = ttf_path
     f = TTFont(ttf_path)
-    for tag in [
-        "TSIV", "TSI0", "TSI1", "TSI2", "TSI3", "TSI4", "TSI5"
-    ]:
+    tags = [tag for tag in f if tag.startswith("TSI")]
+    for tag in tags:
         if tag in f:
             del f[tag]
     f.save(out_path)
