@@ -26,7 +26,7 @@ If `TTF_OUT_PATH` is not specified, the original font file is overwritten.
 
 ## voc_parse
 
-Parse a VOLT project file (.vtp) using fontTools.voltLib. This can be used as a syntax check.
+Parse a VOLT project file (.vtp) using fontTools.voltLib. This can be used as a syntax check. It doesn't compile the project.
 
 ```bash
 $ voc_parse VTP_PATH
