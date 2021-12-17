@@ -34,10 +34,20 @@ $ voc_parse VTP_PATH
 
 ## voc_ship
 
-Remove VOLT source data from a font.
+Remove VOLT and VTT source data from a font.
 
 ```bash
 $ voc_ship TTF_PATH [TTF_OUT_PATH]
 ```
 
 If `TTF_OUT_PATH` is not specified, the original font file is overwritten.
+
+## voc_encode
+
+Experimental. Add a Unicode value for a glyph in VOLT source data. The cmap table is not actually changed by this command, you still have to open the font in VOLT and compile the project.
+
+```bash
+$ voc_encode GLYPH_NAME UNICODE_VALUE TTF_PATH [TTF_PATH]
+```
+
+The Unicode value should be specified as `U+` followed by a hexadecimal number. The DEF_GLYPH line will always specify the glyph as "BASE" at the moment.

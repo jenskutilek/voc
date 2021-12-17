@@ -15,6 +15,7 @@ setup(
     description="VOLT command line tools",
     entry_points={
         "console_scripts": [
+            "voc_encode = voc.encode:encode",
             "voc_extract = voc:extract",
             "voc_merge = voc:merge",
             "voc_parse = voc:parse",
